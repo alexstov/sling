@@ -10,6 +10,11 @@
 
 ### Flags
 
+## Usage
+fdsa
+
+`sling log view`
+
 ## Setup
 
 ## Contributing

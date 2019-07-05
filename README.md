@@ -1,1 +1,1 @@
-<p><img src="https://github.com/alexstov/sling/blob/master/Sling.png" style="max-width:100%;"></p>
+[![N|Solid](https://github.com/alexstov/sling/edit/master/img/Sling.png)](https://github.com/alexstov/sling)

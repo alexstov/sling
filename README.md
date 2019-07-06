@@ -3,7 +3,7 @@
 ### Sling is a network traffic simulation, test automation tool for middleware developers, testers or anybody else in need to send file requests through the HTTP or TCP protocols, controlling rate frequency, number of concurrent connections, delays, and timeouts. It allows to collect the response time statistics, mean and percentile.
 
 ## Overview
-Sling is a lightweight CUI alternative to network test automation tools like Postman with the set of features required to send file requests to network endpoints and collect performance statistics. The requests are stored in files and sent individually or as a collection of directory files with set frequency, repeat count, delays and frequency. 
+Sling is a lightweight CUI alternative to network test automation tools like Postman with the set of features required to send file requests to network endpoints and collect performance statistics. The requests are stored in files and sent individually or as a collection of directory files with set frequency, concurrent connection and repeat counts, delays and timeouts.
 
 ## Quickstart
 

@@ -11,6 +11,14 @@ Sling is a lightweight CUI alternative to network test automation tools like Pos
 
 ### Commands
 
+### sling request send
+
+### sling config view
+
+### sling log view
+
+### sling log clean
+
 ### Config
 
 ### Flags

@@ -40,31 +40,23 @@ dir: "/home/alexstol/Data/Current/tpf/request"
 wildcard: "*.dat*"
 ```
 
-The send settings include repeat count to send single file or multiple files from the same directory, destinationendpoint configuraiton, and options to save send requests and responses.
+The send settings include repeat count to send single file or multiple files from the same directory, destination endpoint configuraiton, and options to save send requests and responses. In the example below requests 10 requests will be send to HTTP POST endpoint of type 2 to the address htt://localhost:8080/TRAN. Each request will be saved in /home/myaccount/Logs/Sling directory before sent and responses saved to /home/myaccount/Logs/Sling after received.
 
 ```
-repeat: 1
+repeat: 10
 endpointIndex: 1
 endpoints:
 - endpoint:
   address: "localhost"
-  port: 9013
+  port: 8634
   type: 1
 - endpoint:
-  address: HTTP://localhost:9013/GEN/TPFA
+  address: htt://localhost:8080/TRAN
   type: 2
-- endpoint:
-  address: "VHLDVBUAS008.TVLPORT.NET"
-  port: 9000
-  type: 1
-- endpoint:
-  address: HTTP://vhldvgfbu001.tvlport.net:9000/GEN/TPFA
-  port: 9000
-  type: 2
-saveReq: false
-saveReqDir: "/home/alexstol/Logs/Sling/"
-saveRes: false
-saveResDir: "/home/alexstol/Logs/Sling/"
+saveReq: true
+saveReqDir: "/home/myaccount/Logs/Sling/"
+saveRes: true
+saveResDir: "/home/myaccount/Logs/Sling/"
 ```
 
 ### Flags

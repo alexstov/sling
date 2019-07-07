@@ -14,11 +14,14 @@ Sling is a lightweight CUI alternative to network test automation tools like Pos
 ### `sling request send -f myrequest.dat`
 Send myrequest.dat file content to default endpont address set in SLINGCONFIG.
 
-### sling config view
+### `sling config view`
+View SLINGCONFIG file content.
 
-### sling log view
+### `sling log view`
+View sling log file.
 
-### sling log clean
+### sling log clea
+Clean sling log file.
 
 ### Config
 

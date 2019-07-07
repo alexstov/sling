@@ -59,6 +59,39 @@ saveRes: true
 saveResDir: "/home/myaccount/Logs/Sling/"
 ```
 
+```
+throttle:  
+  cxnNum : 2
+  cxnLim : true
+  sleepMs : 0
+  rateSec : 100
+  rateMin : 6000
+  tmoCxn : 10
+  tmoSec : 43
+  tmoRdS : 43
+  tmoWrS : 10
+```
+
+```
+log:
+  level: 5
+  logFile: "/home/alexstol/Logs/Sling/sling.log"
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2019-01-02 15:04:05"
+```
+
+```
+console:
+  level: 6
+  flat: false
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2019-01-02 15:04:05"
+```
+
 ### Flags
 
 ## Usage

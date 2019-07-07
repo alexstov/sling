@@ -11,7 +11,8 @@ Sling is a lightweight CUI alternative to network test automation tools like Pos
 
 ### Commands
 
-### `sling request send`
+### `sling request send -f myrequest.dat`
+Send myrequest.dat file content to default endpont address set in SLINGCONFIG.
 
 ### sling config view
 

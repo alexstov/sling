@@ -32,6 +32,8 @@ Sling configuration path is set using SLINGCONFIG environment variable. For conv
 
 `source ~/.bashrc`
 
+All sling settings can be set using SLINGCONFIG file. 
+
 ### Flags
 
 ## Usage

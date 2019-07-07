@@ -26,9 +26,8 @@ Clean sling log file, request and response log data.
 ### Config
 Sling configuration path is set using SLINGCONFIG environment variable.
 
-`~ vi ~/.bashrc
-
-export SLINGCONFIG=/home/yourusername/yourpath/config.DV.yml`
+`~ vi ~/.bashrc`
+`export SLINGCONFIG=/home/yourusername/yourpath/config.DV.yml`
 
 ### Flags
 

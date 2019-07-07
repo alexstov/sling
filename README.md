@@ -32,7 +32,40 @@ export SLINGCONFIG=/home/yourusername/yourpath/config.DV.yml
 source ~/.bashrc
 ```
 
-All sling settings can be set using SLINGCONFIG file. 
+All sling settings can be set using SLINGCONFIG file. These include send file settings such as the filename of the file, directory where the file is stored, and wildcard to match multiple files from the same directory. 
+
+```
+file: ""
+dir: "/home/alexstol/Data/Current/tpf/request"
+wildcard: "*.dat*"
+```
+
+The send settings include repeat count to send single file or multiple files from the same directory, destinationendpoint configuraiton, and options to save send requests and responses.
+
+```
+repeat: 1
+endpointIndex: 1
+endpoints:
+- endpoint:
+  address: "localhost"
+  port: 9013
+  type: 1
+- endpoint:
+  address: HTTP://localhost:9013/GEN/TPFA
+  type: 2
+- endpoint:
+  address: "VHLDVBUAS008.TVLPORT.NET"
+  port: 9000
+  type: 1
+- endpoint:
+  address: HTTP://vhldvgfbu001.tvlport.net:9000/GEN/TPFA
+  port: 9000
+  type: 2
+saveReq: false
+saveReqDir: "/home/alexstol/Logs/Sling/"
+saveRes: false
+saveResDir: "/home/alexstol/Logs/Sling/"
+```
 
 ### Flags
 

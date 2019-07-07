@@ -20,8 +20,8 @@ View SLINGCONFIG file content.
 ### `sling log view`
 View sling log file.
 
-### sling log clea
-Clean sling log file.
+### `sling log clean`
+Clean sling log file, request and response log data.
 
 ### Config
 

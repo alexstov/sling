@@ -1,6 +1,6 @@
 # ![sling](https://github.com/alexstov/sling/blob/master/img/Sling.png)
 
-### Network traffic simulation, test automation tool for middleware developers, testers or anybody else in need to send file requests through the HTTP or TCP protocol, controlling rate frequency, number of concurrent connections, delays, and timeouts. It allows to collect the response time statistics, mean and percentiles.
+### Network traffic simulation, test automation tool for software developers, testers or anybody else in need to send file requests through the HTTP or TCP protocol, controlling rate frequency, number of concurrent connections, delays, and timeouts. It allows to collect the response time statistics, mean and percentiles.
 
 ## Overview
 Sling is a lightweight CUI alternative to network test automation tools like Postman with the set of features required to send file requests to network endpoints and collect performance statistics. The requests are stored in files and sent individually or as a collection of directory files with set frequency, concurrent connection and repeat counts, delays and timeouts.
@@ -24,7 +24,7 @@ View sling log file.
 Clean sling log file, request and response log data.
 
 ### Config
-Sling configuration path is set using SLINGCONFIG environment variable. For conveniance you can permanently safe the path, for bash shell in .bashrc, as below.
+Sling configuration path is set using SLINGCONFIG environment variable. For conveniance you can permanently set the path as in the bash shell example below.
 
 ```
 ~ vi ~/.bashrc
@@ -93,6 +93,40 @@ console:
 ```
 
 ### Flags
+Flags are used to customize sling request send functionality by overriding SLINGCONFIG settings. The folling flags are used:
+
+```
+Flags:
+  -a, --address string      endpoint IP, DNS name, or HTTP address (default "HTTP://localhost:9013/GEN/TPFA")
+  -c, --cltType string      network client type, TCP or HttpPost (default "HTTPPost")
+  -y, --conHis              write histogram to console (default true)
+  -l, --cxnLim              limit the number of concurrent connections (default true)
+  -n, --cxnNum uint         number of concurrent connections (default 2)
+  -d, --dir string          directory to send files from (default "/home/alexstol/Data/Current/tpf/request")
+  -i, --endpoint uint       active endpoint index in SLINGCONFIG, zero-based (default 1)
+  -f, --file string         filepath or filename to send
+  -h, --help                help for send
+  -g, --logHis              write histogram to log file (default true)
+  -p, --port uint           endpoint port number
+  -m, --rateMin uint        send rate per minute (default 6000)
+  -s, --rateSec uint        send rate per second (default 100)
+  -r, --repeat uint         send repeat count (default 1)
+  -q, --saveReq             save requests
+  -k, --saveReqDir string   directory to save requests (default "/home/alexstol/Logs/Sling/")
+  -o, --saveRes             save responses
+  -j, --saveResDir string   directory to save response (default "/home/alexstol/Logs/Sling/")
+  -e, --sleepMs uint        delay after each repeated request
+  -u, --tmoCxn uint         network client dial timeout (default 10)
+  -v, --tmoRdS uint         network client timeout for Read calls (default 43)
+  -t, --tmoSec uint         network client timeout (default 43)
+  -x, --tmoWrS uint         network client timeout for Write calls (default 10)
+  -w, --wildcard string     filename matching wildcard (default "*.dat*")
+
+Global Flags:
+      --conFlat       set console flat output without timestamp and fields
+      --conLvl uint   console output level (default 6)
+      --logLvl uint   log output level (default 5)
+```
 
 ## Usage
 fdsa

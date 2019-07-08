@@ -123,9 +123,9 @@ Flags:
   -w, --wildcard string     filename matching wildcard (default "*.dat*")
 
 Global Flags:
-      --conFlat       set console flat output without timestamp and fields
-      --conLvl uint   console output level (default 6)
-      --logLvl uint   log output level (default 5)
+  --conFlat       set console flat output without timestamp and fields
+  --conLvl uint   console output level (default 6) 
+  --logLvl uint   log output level (default 5)
 ```
 
 ## Usage

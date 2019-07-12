@@ -40,7 +40,7 @@ dir: "/home/alexstol/Data/Current/tpf/request"
 wildcard: "*.dat*"
 ```
 
-The send settings include repeat count to send single file or multiple files from the same directory, destination endpoint configuraiton, and options to save send requests and responses. In the example below requests 10 requests will be send to HTTP POST endpoint of type 2 to the address htt://localhost:8080/TRAN. Each request will be saved in /home/myaccount/Logs/Sling directory before sent and responses saved to /home/myaccount/Logs/Sling after received.
+The send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://localhost:8080/TRAN. Each request is saved in /home/myaccount/Logs/Sling directory before sent, and responses are saved to /home/myaccount/Logs/Sling.
 
 ```
 repeat: 10
@@ -58,6 +58,9 @@ saveReqDir: "/home/myaccount/Logs/Sling/"
 saveRes: true
 saveResDir: "/home/myaccount/Logs/Sling/"
 ```
+Throttle settings control the rate of requests using **rateSec** and **rateMin** and **cxtNum** limits the  rate of new requests sling sends to the destination by restriction buffer capacity that holds connection bursts. Internally sling prepares requests before enquing them to network clinet for transmission. Storing requests affects local computer resources; the **cxnLim** is used to control the number of prepared to send requests when set set to true, along with **cxtNum** limit i.e. only two concurrent requests are read from the files and enqueued to send when **cxnLim == true** and **cxtNum = 2** vs the total number of repeat requests when **cxnLim == false**.
+
+**tmoCxn**, **tmoSec** control network cling timeout when sending requests to destiantion. **tmoRdS** and **tmoWrS** are used for enhanced control over read and write timeouts respectively.
 
 ```
 throttle:  

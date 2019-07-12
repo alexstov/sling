@@ -75,6 +75,8 @@ throttle:
   tmoWrS : 10
 ```
 
+Log settings control the paremeters of sling logging which used [sirupsen/logrus](https://github.com/sirupsen/logrus) internally. **histogram** enables log metrics output produced using [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics) library.
+
 ```
 log:
   level: 5

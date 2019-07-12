@@ -40,7 +40,7 @@ dir: "/home/alexstol/Data/Current/tpf/request"
 wildcard: "*.dat*"
 ```
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address <http://localhost:8080/TRAN>. Each request is saved in /home/myaccount/Logs/Sling directory before sent, and responses are saved to /home/myaccount/Logs/Sling.
+Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http:<i></i>localhost:8080/TRAN. Each request is saved in /home/myaccount/Logs/Sling directory before sent, and responses are saved to /home/myaccount/Logs/Sling.
 
 ```
 repeat: 10

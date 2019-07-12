@@ -60,7 +60,7 @@ saveResDir: "/home/myaccount/Logs/Sling/"
 ```
 Throttle settings control the rate of requests using **rateSec** and **rateMin** and **cxtNum** limits the  rate of new requests sling sends to the destination by restriction buffer capacity that holds connection bursts. Internally sling prepares requests before enquing them to network clinet for transmission. Storing requests affects local computer resources; the **cxnLim** is used to control the number of prepared to send requests when set set to true, along with **cxtNum** limit i.e. only two requests read from the files and prepared to send when **cxnLim = true** and **cxtNum = 2** vs. total number of repeat requests prepared when **cxnLim = false**.
 
-**tmoCxn**, **tmoSec** control network cling timeout when sending requests to destiantion. **tmoRdS** and **tmoWrS** are used for enhanced control over read and write timeouts respectively.
+**tmoCxn**, **tmoSec** control network cling timeout when sending requests to destiantion. **tmoRdS** and **tmoWrS** set read and write timeouts respectively.
 
 ```
 throttle:  

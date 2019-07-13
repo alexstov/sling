@@ -175,6 +175,41 @@ sling request send -r 10 -f my_http_request.dat
 [2019-07-15 09:01:45]  INFO   99.9%:            3294.00
 ```
 
+### sling request send -r 5 -a http://localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
+
+Send my_http_request.dat from /tmp directory to http://localhost:8080/TRAN, repeat 5 times, limit the rate to 2 requests per minute.
+
+```
+sling request send -r 1 -a http://localhost:8080/TRAN --file=my_http_request.dat --conFlat=true
+
+[2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:50:21]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:50:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:51:21]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:51:21]  INFO histogram Client
+
+[2019-07-15 09:51:21]  INFO   count:               5
+
+[2019-07-15 09:51:21]  INFO   min:              3108
+
+[2019-07-15 09:51:21]  INFO   max:              3498
+
+[2019-07-15 09:51:21]  INFO   mean:             3328.40
+
+[2019-07-15 09:51:21]  INFO   stddev:            149.43
+
+[2019-07-15 09:51:21]  INFO   median:           3419.00
+
+[2019-07-15 09:51:21]  INFO   75%:              3459.50
+
+[2019-07-15 09:51:21]  INFO   95%:              3498.00
+
+[2019-07-15 09:51:21]  INFO   99%:              3498.00
+
+[2019-07-15 09:51:21]  INFO   99.9%:            3498.00
+```
+
 `sling log view`
 
 ## Setup

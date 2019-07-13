@@ -36,7 +36,7 @@ All sling settings are set using SLINGCONFIG file. These include send file setti
 
 ```
 file: ""
-dir: "/home/alexstov/Data/Current/tpf/request"
+dir: "/home/alexstov/sling/data"
 wildcard: "*.dat*"
 ```
 
@@ -135,7 +135,44 @@ Global Flags:
 ```
 
 ## Usage
-fdsa
+
+### sling request send -r 10 -f my_http_request.dat
+
+Send my_http_request.dat from SLINGCONFIG directory using default settings, repeat the request 10 times.
+
+```
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
+[2019-07-15 09:01:45]  INFO histogram Client
+
+[2019-07-15 09:01:45]  INFO   count:              10
+
+[2019-07-15 09:01:45]  INFO   min:              3211
+
+[2019-07-15 09:01:45]  INFO   max:              3294
+
+[2019-07-15 09:01:45]  INFO   mean:             3249.80
+
+[2019-07-15 09:01:45]  INFO   stddev:             29.40
+
+[2019-07-15 09:01:45]  INFO   median:           3243.00
+
+[2019-07-15 09:01:45]  INFO   75%:              3288.00
+
+[2019-07-15 09:01:45]  INFO   95%:              3294.00
+
+[2019-07-15 09:01:45]  INFO   99%:              3294.00
+
+[2019-07-15 09:01:45]  INFO   99.9%:            3294.00
+```
 
 `sling log view`
 

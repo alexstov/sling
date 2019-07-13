@@ -180,7 +180,7 @@ sling request send -r 10 -f my_http_request.dat
 Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TRAN, repeat 5 times, limit the rate to 2 requests per minute.
 
 ```
-sling request send -r 1 -a http://localhost:8080/TRAN --file=my_http_request.dat --conFlat=true
+sling request send -r 5 -a http://<i></i>localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:50:21]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137

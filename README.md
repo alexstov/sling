@@ -141,6 +141,7 @@ Global Flags:
 Send my_http_request.dat from SLINGCONFIG directory using default settings, repeat the request 10 times.
 
 ```
+sling request send -r 10 -f my_http_request.dat
 [2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:01:45]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137

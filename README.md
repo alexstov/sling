@@ -51,7 +51,7 @@ endpoints:
   port: 8634
   type: 1
 - endpoint:
-  address: htt://localhost:8080/TRAN
+  address: http://localhost:8080/TRAN
   type: 2
 saveReq: true
 saveReqDir: "/home/alexstov/Logs/Sling/"

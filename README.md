@@ -40,7 +40,7 @@ dir: "/home/alexstol/Data/Current/tpf/request"
 wildcard: "*.dat*"
 ```
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TRAN. Each request is saved in /home/myaccount/Logs/Sling directory before sent, and responses are saved in /home/myaccount/Logs/Sling.
+Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TRAN. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/myaccount/Logs/Sling.
 
 ```
 repeat: 10
@@ -54,9 +54,9 @@ endpoints:
   address: htt://localhost:8080/TRAN
   type: 2
 saveReq: true
-saveReqDir: "/home/myaccount/Logs/Sling/"
+saveReqDir: "/home/alexstov/Logs/Sling/"
 saveRes: true
-saveResDir: "/home/myaccount/Logs/Sling/"
+saveResDir: "/home/alexstov/Logs/Sling/"
 ```
 Throttle settings control the rate of requests using **rateSec** and **rateMin**; **cxtNum** limits the  rate of new requests sling sends to the destination by restriction buffer capacity that holds connection bursts. Internally sling prepares requests before enquing them to network clinet for transmission. Storing requests affects local computer resources; the **cxnLim** is used to control the number of prepared to send requests when set set to true, along with **cxtNum** limit i.e. only two requests read from the files and prepared to send when **cxnLim = true** and **cxtNum = 2** vs. total number of repeat requests prepared when **cxnLim = false**.
 

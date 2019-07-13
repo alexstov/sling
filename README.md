@@ -181,7 +181,6 @@ Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TRA
 
 ```
 sling request send -r 1 -a http://localhost:8080/TRAN --file=my_http_request.dat --conFlat=true
-
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:50:21]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137

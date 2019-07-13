@@ -28,7 +28,7 @@ Sling configuration path is set using SLINGCONFIG environment variable. For conv
 
 ```
 ~ vi ~/.bashrc
-export SLINGCONFIG=/home/yourusername/yourpath/config.DV.yml
+export SLINGCONFIG=/home/alexstov/sling/config.DV.yml
 source ~/.bashrc
 ```
 
@@ -36,7 +36,7 @@ All sling settings are set using SLINGCONFIG file. These include send file setti
 
 ```
 file: ""
-dir: "/home/alexstol/Data/Current/tpf/request"
+dir: "/home/alexstov/Data/Current/tpf/request"
 wildcard: "*.dat*"
 ```
 

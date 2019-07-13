@@ -175,9 +175,9 @@ sling request send -r 10 -f my_http_request.dat
 [2019-07-15 09:01:45]  INFO   99.9%:            3294.00
 ```
 
-### sling request send -r 5 -a http://localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
+### sling request send -r 5 -a http://<i></i>localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
 
-Send my_http_request.dat from /tmp directory to http://localhost:8080/TRAN, repeat 5 times, limit the rate to 2 requests per minute.
+Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TRAN, repeat 5 times, limit the rate to 2 requests per minute.
 
 ```
 sling request send -r 1 -a http://localhost:8080/TRAN --file=my_http_request.dat --conFlat=true

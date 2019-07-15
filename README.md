@@ -40,7 +40,7 @@ dir: "/home/alexstov/sling/data"
 wildcard: "*.dat*"
 ```
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TRAN. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/myaccount/Logs/Sling.
+Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/myaccount/Logs/Sling.
 
 ```
 repeat: 10
@@ -51,7 +51,7 @@ endpoints:
   port: 8634
   type: 1
 - endpoint:
-  address: http://localhost:8080/TRAN
+  address: http://localhost:8080/TR
   type: 2
 saveReq: true
 saveReqDir: "/home/alexstov/Logs/Sling/"
@@ -175,12 +175,12 @@ sling request send -r 10 -f my_http_request.dat
 [2019-07-15 09:01:45]  INFO   99.9%:            3294.00
 ```
 
-### sling request send -r 5 -a http://<i></i>localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
+### sling request send -r 5 -a http://<i></i>localhost:8080/TR --file=my_http_request.dat -d /tmp -m 2
 
-Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TRAN, repeat 5 times, limit the rate to 2 requests per minute.
+Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TR, repeat 5 times, limit the rate to 2 requests per minute.
 
 ```
-sling request send -r 5 -a http://localhost:8080/TRAN --file=my_http_request.dat -d /tmp -m 2
+sling request send -r 5 -a http://localhost:8080/TR --file=my_http_request.dat -d /tmp -m 2
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:49:51]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137
 [2019-07-15 09:50:21]  INFO Request sent successfully. FilePath=my_http_request.dat Length=160137

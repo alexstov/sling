@@ -40,7 +40,9 @@ dir: "/home/alexstov/sling/data"
 wildcard: "*.dat*"
 ```
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/myaccount/Logs/Sling.
+Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/alexstol/Logs/Sling.
+
+In the configuration below **endpointIndex** is set to 1, which is the second endpoint in SLINGCONIFIG of **type HTTPPost**. The first endpoint is of **type TCP**.
 
 ```
 repeat: 10
@@ -49,10 +51,10 @@ endpoints:
 - endpoint:
   address: "localhost"
   port: 8634
-  type: 1
+  type: 1 # TCP
 - endpoint:
   address: http://localhost:8080/TR
-  type: 2
+  type: 2 # HTTPPost
 saveReq: true
 saveReqDir: "/home/alexstov/Logs/Sling/"
 saveRes: true

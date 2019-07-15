@@ -15,10 +15,10 @@ Sling is a lightweight CUI alternative to network test automation tools like Pos
 Send myrequest.dat file content to default endpont address set in SLINGCONFIG.
 
 ### `sling config view`
-View SLINGCONFIG file content.
+View SLINGCONFIG file content in the console.
 
 ### `sling log view`
-View sling log file.
+View sling log file in the console.
 
 ### `sling log clean`
 Clean sling log file, request and response log data.
@@ -221,8 +221,6 @@ endpoints:
   port: 8634
   type: 1
 ```
-
-`sling log view`
 
 ## Setup
 

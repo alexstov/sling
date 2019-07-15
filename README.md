@@ -40,7 +40,7 @@ dir: "/home/alexstov/sling/data"
 wildcard: "*.dat*"
 ```
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/alexstol/Logs/Sling.
+Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/alexstov/Logs/Sling.
 
 In the configuration below **endpointIndex** is set to 1, which is the second endpoint in SLINGCONIFIG of **type HTTPPost**. The first endpoint is of **type TCP**.
 
@@ -82,7 +82,7 @@ Log settings control the paremeters of sling logging. **histogram** enables metr
 ```
 log:
   level: 5
-  logFile: "/home/alexstol/Logs/Sling/sling.log"
+  logFile: "/home/alexstov/Logs/Sling/sling.log"
   disableColors: true
   fullTimestamp: true
   histogram: true
@@ -110,7 +110,7 @@ Flags:
   -y, --conHis              write histogram to console (default true)
   -l, --cxnLim              limit the number of concurrent connections (default true)
   -n, --cxnNum uint         number of concurrent connections (default 2)
-  -d, --dir string          directory to send files from (default "/home/alexstol/Data/Current/tpf/request")
+  -d, --dir string          directory to send files from (default "/home/alexstov/sling/data")
   -i, --endpoint uint       active endpoint index in SLINGCONFIG, zero-based (default 1)
   -f, --file string         filepath or filename to send
   -h, --help                help for send
@@ -120,9 +120,9 @@ Flags:
   -s, --rateSec uint        send rate per second (default 100)
   -r, --repeat uint         send repeat count (default 1)
   -q, --saveReq             save requests
-  -k, --saveReqDir string   directory to save requests (default "/home/alexstol/Logs/Sling/")
+  -k, --saveReqDir string   directory to save requests (default "/home/alexstov/Logs/Sling/")
   -o, --saveRes             save responses
-  -j, --saveResDir string   directory to save response (default "/home/alexstol/Logs/Sling/")
+  -j, --saveResDir string   directory to save response (default "/home/alexstov/Logs/Sling/")
   -e, --sleepMs uint        delay after each repeated request
   -u, --tmoCxn uint         network client dial timeout (default 10)
   -v, --tmoRdS uint         network client timeout for Read calls (default 43)

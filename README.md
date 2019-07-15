@@ -208,6 +208,17 @@ sling request send -r 5 -a http://localhost:8080/TRAN --file=my_http_request.dat
 
 [2019-07-15 09:51:21]  INFO   99.9%:            3498.00
 ```
+### sling request send -i 0 -f my_tcp_request.dat
+
+Send TCP request from the file to the endpoint with index 0 in SLINGCONFIG. The endpoint is configured in slingconfig below. The endpoint of type 1 sets the client type to TCP.
+
+```
+endpoints:
+- endpoint:
+  address: "localhost"
+  port: 8634
+  type: 1
+```
 
 `sling log view`
 

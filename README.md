@@ -1,9 +1,9 @@
 # ![sling](https://github.com/alexstov/sling/blob/master/img/Sling.png)
 
-### Network traffic simulator, test automation tool for software developers, testers or anybody else in need to send file requests through the HTTP or TCP protocol, controlling rate frequency, number of concurrent connections, delays, and timeouts. It allows to collect the response time statistics, mean, and percentiles.
+### Network traffic simulator and test automation tool for software developers, testers, or anybody else in need to send file requests through the HTTP or TCP protocol, control rate frequency, number of concurrent connections, delays, timeouts, and collect the response time statistics, means, and percentiles.
 
 ## Overview
-Sling is a lightweight CUI alternative to network test automation tools like Postman with the set of features required to send file requests to network endpoints and collect performance statistics. The requests are stored in files and sent individually or as a collection of directory files with set frequency, concurrent connection and repeat counts, delays and timeouts.
+Sling is a lightweight CUI alternative to network test automation tools like Postman with the set of features required to send file requests to network endpoints and collect performance statistics. The requests are stored in files and sent individually or as a collection of directory files with configurable frequency, number of concurrent connections and repeat counts, delays and timeouts.
 
 ## Quickstart
 
@@ -12,7 +12,7 @@ Sling is a lightweight CUI alternative to network test automation tools like Pos
 ### Commands
 
 ### `sling request send -f myrequest.dat`
-Send myrequest.dat file content to default endpont address set in SLINGCONFIG.
+Send myrequest.dat file content to default endpoint address set in SLINGCONFIG.
 
 ### `sling config view`
 View SLINGCONFIG file content in the console.
@@ -24,7 +24,7 @@ View sling log file in the console.
 Clean sling log file, request and response log data.
 
 ### Config
-Sling configuration path is set using SLINGCONFIG environment variable. For conveniance you can permanently set the path as in the bash shell example below.
+Sling configuration path is set using SLINGCONFIG environment variable. For convenience you can permanently set the configuration file path as in the bash shell example below.
 
 ```
 ~ vi ~/.bashrc
@@ -39,10 +39,9 @@ file: ""
 dir: "/home/alexstov/sling/data"
 wildcard: "*.dat*"
 ```
+Send settings include send repeat count for single file or multiple files, destination endpoint configuration, and options to save requests and responses. In the example below ten (10) requests are send to **type 2 HTTP POST** endpoint to the address http://localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sending; the responses are saved in /home/alexstov/Logs/Sling upon completion.
 
-Send settings include repeat count to send single file or multiple files, destination endpoint configuraiton, and options to save send requests and responses. In the example below ten (10) requests are send to type 2 HTTP POST endpoint to the address http://<i></i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sent, and responses are saved in /home/alexstov/Logs/Sling.
-
-In the configuration below **endpointIndex** is set to 1, which is the second endpoint in SLINGCONIFIG of **type HTTPPost**. The first endpoint is of **type TCP**.
+NOTE: The first endpoint is in the configuration below is of **type1 TCP**.
 
 ```
 repeat: 10
@@ -60,9 +59,9 @@ saveReqDir: "/home/alexstov/Logs/Sling/"
 saveRes: true
 saveResDir: "/home/alexstov/Logs/Sling/"
 ```
-Throttle settings control the rate of requests using **rateSec** and **rateMin**; **cxtNum** limits the  rate of new requests sling sends to the destination by restriction buffer capacity that holds connection bursts. Internally sling prepares requests before enquing them to network clinet for transmission. Storing requests affects local computer resources; the **cxnLim** is used to control the number of prepared to send requests when set set to true, along with **cxtNum** limit i.e. only N requests read from the files and prepared for send when **cxnLim = true** and **cxtNum = N** vs. total number of repeat requests prepared when **cxnLim = false**. **sleepMs** sets the number of milliseconds per connection to sleep after each request before sending another request. 
+Throttle settings control the rate of requests using **rateSec** and **rateMin**. **cxtNum** sets tee burst rate to limit the rate of the requests by restricting buffer capacity of connection bursts. Internally sling prepares requests before enqueuing them to network client for transmission. Enqueued requests affects local resource consumption; this can be controlled with **cxnLim** flag to limit the number of prepared requests. When **cxnLim** is set to true, the number of enqueued requests will not exceed **cxnNum** limit. When **cxnLim** is set to false sling will enqueue as many as repeat count of requests. **sleepMs** sets the number of milliseconds to sleep after sending each request  before pulling another request from the queue.
 
-**tmoCxn**, **tmoSec** control network cling timeout when sending requests to destiantion. **tmoRdS** and **tmoWrS** set read and write timeouts respectively. A zoro value for tmo settings mean the request will not time out.
+**tmoCxn**, **tmoSec** control network client timeout for sending requests to destiantion. **tmoRdS** and **tmoWrS** set read and write timeouts respectively. A Zero value for Tmo settings mean the request will not time out.
 
 ```
 throttle:  
@@ -77,7 +76,7 @@ throttle:
   tmoWrS : 10
 ```
 
-Log settings control the paremeters of sling logging. **histogram** enables metrics output in the log file.
+Log settings control the parameters of sling logging. **histogram** enables metrics output in the log file.
 
 ```
 log:
@@ -101,7 +100,7 @@ console:
 ```
 
 ### Flags
-Flags are used to customize sling functionality by overriding SLINGCONFIG settings. The folling flags are used:
+Flags are used to customize sling functionality by overriding SLINGCONFIG settings. The following flags are used:
 
 ```
 Flags:
@@ -179,7 +178,7 @@ sling request send -r 10 -f my_http_request.dat
 
 ### sling request send -r 5 -a http://<i></i>localhost:8080/TR --file=my_http_request.dat -d /tmp -m 2
 
-Send my_http_request.dat from /tmp directory to http://<i></i>localhost:8080/TR, repeat 5 times, limit the rate to 2 requests per minute.
+Send my_http_request.dat from /tmp directory to http://localhost:8080/TR, repeat 5 times, limit the rate to 2 requests per minute.
 
 ```
 sling request send -r 5 -a http://localhost:8080/TR --file=my_http_request.dat -d /tmp -m 2

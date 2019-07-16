@@ -211,7 +211,7 @@ sling request send -r 5 -a http://localhost:8080/TR --file=my_http_request.dat -
 ```
 ### sling request send -i 0 -f my_tcp_request.dat
 
-Send TCP request from the file to the endpoint with index 0 in SLINGCONFIG. The endpoint is configured below with type 1 = TCP.
+Send TCP request from the file to the endpoint with **index 0** in SLINGCONFIG. The endpoint is configured below with **type 1 = TCP**.
 
 ```
 endpoints:

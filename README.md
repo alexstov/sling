@@ -3,9 +3,9 @@
 ### Network traffic simulator and test automation tool for software developers, testers, or anybody else in need to send file requests through the HTTP or TCP protocol, control rate frequency, number of concurrent connections, delays, timeouts, and collect the response time statistics, means, and percentiles.
 
 #### Table of Contents  
-[Overview](#overview)
-[Quickstart](#quickstart)
-[Features](#features)
+[Overview](#overview) 
+[Quickstart](#quickstart) 
+[Features](#features) 
 [Commands](#commands)
 
 <a name="overview"/>

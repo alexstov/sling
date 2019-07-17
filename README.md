@@ -267,7 +267,7 @@ endpoints:
 <a name="credits"/>
 
 ## Credits
-Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics)
+Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics), [agoalofalife/event](https://github.com/agoalofalife/event)
 
 <a name="contacts"/>
 

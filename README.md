@@ -130,7 +130,7 @@ Flags are used to customize sling functionality by overriding SLINGCONFIG settin
 
 ```
 Flags:
-  -a, --address string      endpoint IP, DNS name, or HTTP address (default "HTTP://localhost:9013/GEN/TPFA")
+  -a, --address string      endpoint IP, DNS name, or HTTP address (default "http://localhost:8080/TR")
   -c, --cltType string      network client type, TCP or HttpPost (default "HTTPPost")
   -y, --conHis              write histogram to console (default true)
   -l, --cxnLim              limit the number of concurrent connections (default true)

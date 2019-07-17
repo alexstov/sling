@@ -7,6 +7,14 @@
 - [Quickstart](#quickstart)
 - [Features](#features)
   - [Commands](#commands)
+  - [Config](config)
+  - Flags(flags)
+- Usage(usage)
+- Setup(setup)
+- Contributing(contributing)
+- Credits(credits)
+- Contacts(contacts)
+- Licence(licence)
 
 <a name="overview"/>
 
@@ -36,6 +44,8 @@ View sling log file in the console.
 
 ### `sling log clean`
 Clean sling log file, request and response log data.
+
+<a name="config"/>
 
 ### Config
 Sling configuration path is set using SLINGCONFIG environment variable. For convenience you can permanently set the configuration file path as in the bash shell example below.
@@ -113,6 +123,8 @@ console:
   timestampformat: "2019-01-02 15:04:05"
 ```
 
+<a name="flags"/>
+
 ### Flags
 Flags are used to customize sling functionality by overriding SLINGCONFIG settings. The following flags are used:
 
@@ -148,6 +160,8 @@ Global Flags:
   --conLvl uint   console output level (default 6) 
   --logLvl uint   log output level (default 5)
 ```
+
+<a name="usage"/>
 
 ## Usage
 
@@ -235,7 +249,11 @@ endpoints:
   type: 1
 ```
 
+<a name="setup"/>
+
 ## Setup
+
+<a name="contributing"/>
 
 ## Contributing
 1. Fork it
@@ -246,11 +264,17 @@ endpoints:
 6. Push to the branch (git push origin my-new-feature)
 7. Create new pull request
 
+<a name="credits"/>
+
 ## Credits
 Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics)
 
-## Contact
+<a name="contacts"/>
+
+## Contacts
 Created by Alexey Stolpovskikh (alexstov@gmail.gom; stolpovskikh@hotmail.com)
+
+<a name="licence"/>
 
 ## Licence
 Sling is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) (the "License"); you may not use this software except in compliance with the License.

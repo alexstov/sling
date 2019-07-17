@@ -7,14 +7,14 @@
 - [Quickstart](#quickstart)
 - [Features](#features)
   - [Commands](#commands)
-  - [Config](config)
-  - [Flags](flags)
-- [Usage](usage)
-- [Setup](setup)
-- [Contributing](contributing)
-- [Credits](credits)
-- [Contacts](contacts)
-- [Licence](licence)
+  - [Config](#config)
+  - [Flags](#flags)
+- [Usage](#usage)
+- [Setup](#setup)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [Contacts](#contacts)
+- [Licence](#licence)
 
 <a name="overview"/>
 

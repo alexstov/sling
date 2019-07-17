@@ -41,7 +41,7 @@ wildcard: "*.dat*"
 ```
 Send settings include send repeat count for single file or multiple files, destination endpoint configuration, and options to save requests and responses. In the example below ten (10) requests are send to **type 2 HTTP POST** endpoint to the address http://<i><i>localhost:8080/TR. Each request is saved in /home/alexstov/Logs/Sling directory before sending; the responses are saved in /home/alexstov/Logs/Sling upon completion.
 
-NOTE: The first endpoint is in the configuration below is of **type1 TCP**.
+**NOTE:** The first endpoint is in the configuration below is of **type1 TCP**.
 
 ```
 repeat: 10

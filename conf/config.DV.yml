@@ -1,0 +1,65 @@
+#	PanicLevel  0
+# FatalLevel  1
+# ErrorLevel  2
+# WarnLevel   3
+# InfoLevel   4
+# DebugLevel  5
+# TraceLevel  6
+
+file: ""
+dir: "/home/alexstol/Data/Current/tpf/request"
+wildcard: "*.dat*"
+saveReq: false
+saveReqDir: "/home/alexstol/Logs/Sling/"
+saveRes: false
+saveResDir: "/home/alexstol/Logs/Sling/"
+repeat: 1
+endpointIndex: 1
+endpoints:
+- endpoint:
+  address: "localhost"
+  port: 9013
+  type: 1
+- endpoint:
+  address: HTTP://localhost:9013/GEN/TPFA
+  type: 2
+- endpoint:
+  address: "VHLDVBUAS008.TVLPORT.NET"
+  port: 9000
+  type: 1
+- endpoint:
+  address: HTTP://vhldvgfbu001.tvlport.net:9000/GEN/TPFA
+  port: 9000
+  type: 2
+- endpoint:
+  address: HTTP://SHLPPBUOL001.TVLPORT.NET:9000/GEN/TPFA
+  port: 9000
+  type: 2
+
+throttle:  
+  cxnNum : 2
+  cxnLim : false
+  sleepMs : 0
+  rateSec : 100
+  rateMin : 6000
+  # A zero tmo* value mean the request will not time out.
+  tmoCxn : 10
+  tmoSec : 43
+  tmoRdS : 0
+  tmoWrS : 0
+
+log:
+  level: 5
+  logFile: "/home/alexstol/Logs/Sling/sling.log"
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2006-01-02 15:04:05"
+  
+console:
+  level: 6
+  flat: false
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2006-01-02 15:04:05"

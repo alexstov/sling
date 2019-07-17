@@ -233,7 +233,7 @@ endpoints:
 7. Create new pull request
 
 ## Credits
-Sling is powered by [spf13/cobra](https://github.com/spf13/cobra)
+Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics)
 
 ## Contact
 Created by Alexey Stolpovskikh (alexstov@gmail.gom; stolpovskikh@hotmail.com)

@@ -224,10 +224,19 @@ endpoints:
 ## Setup
 
 ## Contributing
+1. Fork it
+2. Download your fork to your PC (git clone https://github.com/your_username/sling && cd sling)
+3. Create your feature branch (git checkout -b my-new-feature)
+4. Make changes and add them (git add .)
+5. Commit your changes (git commit -m 'Add some feature')
+6. Push to the branch (git push origin my-new-feature)
+7. Create new pull request
 
 ## Credits
+Sling is powered by [spf13/cobra](https://github.com/spf13/cobra)
 
 ## Contact
+Created by Alexey Stolpovskikh (alexstov@gmail.gom; stolpovskikh@hotmail.com)
 
 ## Licence
 Sling is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) (the "License"); you may not use this software except in compliance with the License.

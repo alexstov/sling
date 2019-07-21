@@ -1,0 +1,53 @@
+# PanicLevel  0
+# FatalLevel  1
+# ErrorLevel  2
+# WarnLevel   3
+# InfoLevel   4
+# DebugLevel  5
+# TraceLevel  6
+
+file: ""
+dir: "/home/alexstov/sling/data"
+wildcard: "*.dat*"
+saveReq: false
+saveReqDir: "/home/alexstov/sling/logs/req/"
+saveRes: true
+saveResDir: "/home/alexstov/sling/logs/res/"
+repeat: 1
+endpointIndex: 1
+endpoints:
+- endpoint:
+  address: "localhost"
+  port: 8634
+  type: 1 # TCP
+- endpoint:
+  address: http://localhost:8080/TR
+  type: 2 # HTTP POST
+
+throttle:  
+  cxnNum : 2
+  cxnLim : false
+  sleepMs : 0
+  rateSec : 100
+  rateMin : 6000
+  # A zero tmo* value mean the request will not time out.
+  tmoCxn : 10
+  tmoSec : 43
+  tmoRdS : 0
+  tmoWrS : 0
+
+log:
+  level: 5
+  logFile: "/home/alexstov/sling/logs/sling.log"
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2006-01-02 15:04:05"
+  
+console:
+  level: 6
+  flat: false
+  disableColors: true
+  fullTimestamp: true
+  histogram: true
+  timestampformat: "2006-01-02 15:04:05"

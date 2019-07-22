@@ -256,7 +256,7 @@ func prepareRequests(out chan<- interface{}, args *emul.SendArgs, wg *sync.WaitG
 						// No files, only directories.
 						i = args.Repeat
 						break
-					} else if i == args.Repeat {
+					} else if i > args.Repeat {
 						// All requests sent.
 						break
 					}

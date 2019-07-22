@@ -264,6 +264,37 @@ endpoints:
   type: 1
 ```
 
+### sling request send -d /home/alexstov/sling/test_set -r 3
+Send a collection of files from /home/alexstov/sling/test_set directory using default SLINGCONFIG settings, repeat 3 times. The files sent sequentially - my_http_request_1.dat sent twice, my_http_request_2.dat sent once, until 3 requests completed.
+
+```
+sling request send -d /home/alexstov/sling/test_set -r 3
+[2019-07-20 10:39:05]  INFO Request sent successfully. FilePath=/home/alexstov/sling/test_set/my_http_request_2.dat Length=10926
+[2019-07-20 10:39:05]  INFO Request sent successfully. FilePath=/home/alexstov/sling/test_set/my_http_request_1.dat Length=160137
+[2019-07-20 10:39:05]  INFO Request sent successfully. FilePath=/home/alexstov/sling/test_set/my_http_request_1.dat Length=160137
+[2019-07-20 10:39:05]  INFO histogram Client
+
+[2019-07-20 10:39:05]  INFO   count:               3
+
+[2019-07-20 10:39:05]  INFO   min:              5369
+
+[2019-07-20 10:39:05]  INFO   max:              5385
+
+[2019-07-20 10:39:05]  INFO   mean:             5377.67
+
+[2019-07-20 10:39:05]  INFO   stddev:              6.60
+
+[2019-07-20 10:39:05]  INFO   median:           5379.00
+
+[2019-07-20 10:39:05]  INFO   75%:              5385.00
+
+[2019-07-20 10:39:05]  INFO   95%:              5385.00
+
+[2019-07-20 10:39:05]  INFO   99%:              5385.00
+
+[2019-07-20 10:39:05]  INFO   99.9%:            5385.00
+```
+
 <a name="contributing"/>
 
 ## Contributing

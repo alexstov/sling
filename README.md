@@ -314,7 +314,7 @@ Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/log
 <a name="contacts"/>
 
 ## Contacts
-Created by Alexey Stolpovskikh (alexstov@gmail.gom; stolpovskikh@hotmail.com)
+Created by Alexey Stolpovskikh (alexstov@gmail.com; stolpovskikh@hotmail.com)
 
 <a name="licence"/>
 

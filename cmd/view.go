@@ -19,29 +19,21 @@ import (
 	"io"
 	"os"
 
-	yaml "github.com/gopkg.in/yaml.v2"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-)
-
-var (
-	viewLong = templates.LongDesc(`
-		View slingconfig settings`)
-
-	viewExample = templates.Examples(`
-		# View current slingconfig settings
-		sling config view`)
+	yaml "gopkg.in/yaml.v2"
 )
 
 // ViewCmd command.
 var ViewCmd = &cobra.Command{
-	Use:     "view",
-	Short:   i18n.T("View slingconfig settings"),
-	Long:    viewLong,
-	Example: viewExample,
-	Run:     viewRun,
+	Use:   "view",
+	Short: "View slingconfig settings",
+	Long: `
+	View slingconfig settings`,
+	Example: `
+	# View current slingconfig settings
+	sling config view`,
+	Run: viewRun,
 }
 
 func contains(slice []string, item string) bool {

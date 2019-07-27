@@ -28,7 +28,6 @@ import (
 	"github.com/alexstov/sling/sio"
 	"github.com/alexstov/sling/throt"
 	"github.com/cloudflare/cfssl/log"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
 	"github.com/rcrowley/go-metrics"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -36,7 +35,7 @@ import (
 
 var cmdSend = &cobra.Command{
 	Use:   "send [flags]",
-	Short: i18n.T("Send requests to the endpoint"),
+	Short: "Send requests to the endpoint",
 	Long: `Send requests from a file or directory to the endpoint.
 
 Examples:

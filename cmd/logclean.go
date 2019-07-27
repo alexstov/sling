@@ -20,28 +20,20 @@ import (
 	"os/exec"
 
 	"github.com/alexstov/sling/sio"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
-var (
-	logcleanLong = templates.LongDesc(`
-		Clean sling log file`)
-
-	logcleanExample = templates.Examples(`
-		# Clean sling log file using Linux truncate command
-		sling log clean`)
-)
-
 // LogcleanCmd command.
 var LogcleanCmd = &cobra.Command{
-	Use:     "clean",
-	Short:   i18n.T("Clean sling log file"),
-	Long:    logcleanLong,
-	Example: logcleanExample,
-	Run:     logcleanRun,
+	Use:   "clean",
+	Short: "Clean sling log file",
+	Long: `
+	Clean sling log file`,
+	Example: `
+	# Clean sling log file using Linux truncate command
+	sling log clean`,
+	Run: logcleanRun,
 }
 
 func logcleanRun(cmd *cobra.Command, args []string) {

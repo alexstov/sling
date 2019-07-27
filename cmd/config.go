@@ -15,29 +15,18 @@
 package cmd
 
 import (
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/spf13/cobra"
-)
-
-var (
-	configLong = templates.LongDesc(`
-		Manage slingconfig settings`)
-
-	configExample = templates.Examples(`
-		# View slingconfig settings
-		sling config view`)
-
-	defaultOutputFormat = "yaml"
 )
 
 // ConfigCmd command.
 var ConfigCmd = &cobra.Command{
 	Use:                   "config SUBCOMMAND",
 	DisableFlagsInUseLine: true,
-	Short:                 i18n.T("Manage slingconfig settings"),
-	Long:                  configLong,
-	Example:               configExample,
+	Short:                 "Manage slingconfig settings",
+	Long:                  "Manage slingconfig settings",
+	Example: `
+	# View slingconfig settings
+	sling config view`,
 }
 
 func init() {

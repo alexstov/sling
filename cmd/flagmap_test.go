@@ -18,7 +18,6 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/spf13/cobra"
@@ -47,7 +46,7 @@ var _ = Describe("Flagmap", func() {
 		testCmd = &cobra.Command{
 			Use:                   "slingtest",
 			DisableFlagsInUseLine: true,
-			Short:                 i18n.T("root cmd long descr"),
+			Short:                 "root cmd long descr"),
 			Long:                  "root cmd long descr",
 			Example:               "root cmd example",
 		}

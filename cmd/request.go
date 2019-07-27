@@ -15,27 +15,19 @@
 package cmd
 
 import (
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/spf13/cobra"
-)
-
-var (
-	requestLong = templates.LongDesc(`
-		Sling request managment`)
-
-	requestExample = templates.Examples(`
-		Send a single request.
-		sling request send --filename=m000001-tpf-request.dat`)
 )
 
 // RequestCmd command.
 var RequestCmd = &cobra.Command{
 	Use:                   "request SUBCOMMAND",
 	DisableFlagsInUseLine: true,
-	Short:                 i18n.T("Process sling requests"),
-	Long:                  requestLong,
-	Example:               requestExample,
+	Short:                 "Process sling requests",
+	Long: `
+	Sling request managment`,
+	Example: `
+	Send a single request.
+	sling request send --filename=m000001-tpf-request.dat`,
 }
 
 func init() {

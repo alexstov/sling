@@ -18,28 +18,20 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
-var (
-	logviewLong = templates.LongDesc(`
-		View sling log file`)
-
-	logviewExample = templates.Examples(`
-		# View sling log using Linux cat command
-		sling log view`)
-)
-
 // LogviewCmd command.
 var LogviewCmd = &cobra.Command{
-	Use:     "view",
-	Short:   i18n.T("View sling log file"),
-	Long:    logviewLong,
-	Example: logviewExample,
-	Run:     logviewRun,
+	Use:   "view",
+	Short: "View sling log file",
+	Long: `
+	View sling log file`,
+	Example: `
+	# View sling log using Linux cat command
+	sling log view`,
+	Run: logviewRun,
 }
 
 func logviewRun(cmd *cobra.Command, args []string) {

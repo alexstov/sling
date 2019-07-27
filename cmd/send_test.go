@@ -20,7 +20,6 @@ import (
 	"github.com/alexstov/sling/cmd"
 	"github.com/alexstov/sling/emul"
 	"github.com/alexstov/sling/unit"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/spf13/cobra"
@@ -37,7 +36,7 @@ var _ = Describe("Send", func() {
 		var err error
 		testSendCmd = &cobra.Command{
 			Use:   "send [flags]",
-			Short: i18n.T("Send requests to the endpoint"),
+			Short: "Send requests to the endpoint",
 			Long: `Send requests from a file or directory to the endpoint.
 
 			Examples:

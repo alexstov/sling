@@ -24,8 +24,6 @@ import (
 	"github.com/alexstov/sling/cui"
 	"github.com/alexstov/sling/slog"
 	"github.com/cloudflare/cfssl/log"
-	"github.com/kubernetes/pkg/kubectl/util/i18n"
-	"github.com/kubernetes/pkg/kubectl/util/templates"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -37,26 +35,20 @@ var sconf *conf.SlingConfig
 // Con Consoler interface implementation.
 var Con cui.Consoler
 
-var (
-	rootLong = templates.LongDesc(`
-sling is a tool to send files to the endpoint(s),
-setting trottling and delays between concurrent requests.`)
-
-	rootExample = templates.Examples(`
-		# View current sling config
-		sling config view
-		
-		# Send a single file to specified endpoint
-		sling request send -f myfile.dat -a myhost.com -p 9080`)
-)
-
 // RootCmd sling root command
 var RootCmd = &cobra.Command{
 	Use:                   "sling",
 	DisableFlagsInUseLine: true,
-	Short:                 i18n.T("sling network traffic emulator"),
-	Long:                  rootLong,
-	Example:               rootExample,
+	Short:                 "sling network traffic emulator",
+	Long: `
+	sling is a tool to send files to the endpoint(s),
+	setting trottling and delays between concurrent requests.`,
+	Example: `
+	# View current sling config
+	sling config view
+	
+	# Send a single file to specified endpoint
+	sling request send -f myfile.dat -a myhost.com -p 9080`,
 }
 
 // RootFlags command flags
@@ -91,7 +83,7 @@ func initSlingFromConfig() (err error) {
 		log.Error("Cannot initialize console.", err)
 		return
 	}
-	
+
 	flagmap := RootFlags.GetFlagmap()
 
 	// The events are used to set flag values passed explicitly from command line.

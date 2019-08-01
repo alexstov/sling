@@ -46,7 +46,7 @@ var _ = Describe("Flagmap", func() {
 		testCmd = &cobra.Command{
 			Use:                   "slingtest",
 			DisableFlagsInUseLine: true,
-			Short:                 "root cmd long descr"),
+			Short:                 "root cmd long descr",
 			Long:                  "root cmd long descr",
 			Example:               "root cmd example",
 		}

@@ -309,7 +309,7 @@ sling request send -d /home/alexstov/sling/test_set -r 3
 <a name="credits"/>
 
 ## Credits
-Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics), [agoalofalife/event](https://github.com/agoalofalife/event)
+Sling is powered by [spf13/cobra](https://github.com/spf13/cobra), [sirupsen/logrus](https://github.com/sirupsen/logrus), [rcrowley/go-metrics](https://github.com/rcrowley/go-metrics), [agoalofalife/event](https://github.com/agoalofalife/event), [sheerun/queue](https://github.com/sheerun/queue)
 
 <a name="contacts"/>
 

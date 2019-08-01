@@ -17,7 +17,6 @@ package main_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	// . "github.com/alexstov/sling"
 )
 
 var _ = Describe("Main", func() {
